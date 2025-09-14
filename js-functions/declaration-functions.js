@@ -10,6 +10,7 @@ console.log(sayHello());
 const returnAplus2 = function (a) {
   return a + 2;
 }
+console.log(returnAplus2(2))
 
 function mathOperationWithFunctionExpress (a) {
   const numbers = [1, 2, 3, 4];
@@ -22,10 +23,9 @@ function mathOperationWithFunctionExpress (a) {
 
 console.log('Now, I used the function express as a parameter for my operations function: ' + mathOperationWithFunctionExpress(returnAplus2(2)));
 
-// Array function
-const isEven = (number) => {
-  return number % 2 == 0;
-}
+// Arrow function
+const isEven = (number) => number % 2 == 0;
+
 
 console.log(`Return if number is even or not with a array funcion: ${isEven(3)}`); // Expected return: false
 
