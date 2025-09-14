@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["views"]
+  binaryTargets   = ["native", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Task {
+  id          Int     @id
+  name        String
+  description String?
+
+  statusId Int?
+  status   StatusTask? @relation(fields: [statusId], references: [id])
+
+  @@map("tasks")
+}
+
+model StatusTask {
+  id   Int    @id @default(autoincrement())
+  name String
+
+  tasks Task[]
+
+  @@map("status_task")
+}
