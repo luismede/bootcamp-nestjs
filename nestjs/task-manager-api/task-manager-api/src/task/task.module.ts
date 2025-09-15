@@ -1,15 +1,33 @@
 import { Module } from "@nestjs/common";
-import { CreateTaskController, DeleteTaskController } from './controller'
-import { CreateTaskService, DeleteTaskService } from "./services";
+import { 
+  CreateTaskController,
+  DeleteTaskController,
+  FindTaskByIdController,
+  FindTaskAllController
+} 
+from './controller';
+
+
+import { 
+  CreateTaskService,
+  DeleteTaskService,
+  FindTaskByIdService,
+  FindTaskAllService
+} 
+from "./services";
 
 @Module({
     controllers: [
       CreateTaskController,
-      DeleteTaskController
+      DeleteTaskController,
+      FindTaskByIdController,
+      FindTaskAllController
     ],
     providers: [
     CreateTaskService,
-    DeleteTaskService
+    DeleteTaskService,
+    FindTaskByIdService,
+    FindTaskAllService
   ]
 })
 

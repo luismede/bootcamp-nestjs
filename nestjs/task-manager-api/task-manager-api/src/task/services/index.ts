@@ -1,2 +1,4 @@
 export * from './create-task.service'
 export * from './delete-task.service'
+export * from './find-task-by-id.service'
+export * from './find-task-all.service'
