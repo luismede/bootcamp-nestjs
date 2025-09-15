@@ -1,7 +1,7 @@
 import { BadRequestException, ConflictException, Controller, Delete, HttpCode, HttpStatus, Param, ParseIntPipe } from "@nestjs/common";
 import { DeleteTaskService } from "../services";
 import { DeleteTaskOutputDTO } from "../dto/io/delete-task-output.dto";
-import { DeleteTaskInputDTO } from "../dto/io/delete-task-input.dto";
+
 
 @Controller()
 export class DeleteTaskController {
