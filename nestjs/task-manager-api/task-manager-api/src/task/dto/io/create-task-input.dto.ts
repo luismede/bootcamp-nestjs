@@ -1,4 +1,5 @@
 export type CreateTaskInputDTO = {
-  name: string
+  name: string;
+  finishedAt?: Date | null; 
   description: string;
 }

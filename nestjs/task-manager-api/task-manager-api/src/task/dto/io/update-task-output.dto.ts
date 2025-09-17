@@ -1,13 +1,11 @@
 import { TaskStatus } from "@prisma/client";
 
-export interface FindTaskAllOutputDTO {
-  data: Array< {
+export class UpdateTaskOutputDTO {
   id: number;
-  name: string;
+  name?: string | null;
   description?: string | null;
   createdAt: Date;
   finishedAt?: Date | null;
-  statusId: number;  
+  statusId: number;
   status: TaskStatus
-  }>
-};
+}
