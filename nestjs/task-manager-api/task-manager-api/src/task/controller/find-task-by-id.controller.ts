@@ -13,8 +13,7 @@ export class FindTaskByIdController {
   public async handle(@Param('id', ParseIntPipe) id: number): Promise<FindTaskByIdOutputDTO> {
     if (!id) throw new NotFoundException ('Informe o id da tarefa que você deseja buscar');
 
-    const result = this.findTaskByService.execute({id})
-    return result;
+    return this.findTaskByService.execute({id})
 
   }
 

@@ -1,4 +1,5 @@
 export type CreateTaskRequestDTO = {
-  name: string
+  name: string;
+  finishedAt: Date;
   description: string;
 }

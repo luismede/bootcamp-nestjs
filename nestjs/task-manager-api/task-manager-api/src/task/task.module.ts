@@ -3,7 +3,8 @@ import {
   CreateTaskController,
   DeleteTaskController,
   FindTaskByIdController,
-  FindTaskAllController
+  FindTaskAllController,
+  UpdateTaskController
 } 
 from './controller';
 
@@ -12,7 +13,8 @@ import {
   CreateTaskService,
   DeleteTaskService,
   FindTaskByIdService,
-  FindTaskAllService
+  FindTaskAllService,
+  UpdateTaskService
 } 
 from "./services";
 
@@ -21,13 +23,15 @@ from "./services";
       CreateTaskController,
       DeleteTaskController,
       FindTaskByIdController,
-      FindTaskAllController
+      FindTaskAllController,
+      UpdateTaskController
     ],
     providers: [
     CreateTaskService,
     DeleteTaskService,
     FindTaskByIdService,
-    FindTaskAllService
+    FindTaskAllService,
+    UpdateTaskService
   ]
 })
 
