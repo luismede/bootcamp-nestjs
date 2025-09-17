@@ -17,6 +17,8 @@ model Task {
   id Int @id @default(autoincrement())
   name String
   description String?
+  createdAt DateTime @default(now())
+  finishedAt DateTime?
   statusId Int
   
   status TaskStatus @relation(fields: [statusId], references: [id])
